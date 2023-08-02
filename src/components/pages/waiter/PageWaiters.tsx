@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const PageWaiters = () => {
 
+
     const [modal, setModal] = useState({open:false})
     
     const showModal = () => {
@@ -54,7 +55,7 @@ const PageWaiters = () => {
         </section>
         )} {modal.open && (<AddOrder />)}
         </>
-        
+
     )
 }
 

@@ -31,6 +31,8 @@
 
 .container-products {
     display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
     width: 100%;
     text-align: center;
 }

@@ -1,13 +1,13 @@
 import "./Login.css"
 import image from "../../images/Group 8(1).png"
-import { Children, useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
 
 const Login = () => {
 
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const [user, setUser] = useState({
     email: "",
@@ -105,6 +105,10 @@ const Login = () => {
               placeholder="Enviar"
               value="Ingresar"
             ></input>
+            <Link className="login" to="/register">
+              ¿No tienes cuenta? Registrate
+            </Link>
+             
           </div>
         </form>
 

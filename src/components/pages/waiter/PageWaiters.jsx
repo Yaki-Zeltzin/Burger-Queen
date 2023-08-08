@@ -3,6 +3,7 @@ import AddOrder from "./AddOrder"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Product from "../chef/Product";
+import MainMenu from "../../moleculas/MainMenu";
 
 const PageWaiters = () => {
 
@@ -31,8 +32,7 @@ const PageWaiters = () => {
             })
     }, [])
 
-
-    const showBreakfast = () => {
+    const showBreakfast = () => { 
         const productBreakfast = data.filter(p => {
             if (p.type === "Desayuno") {
                 return true
@@ -40,29 +40,25 @@ const PageWaiters = () => {
                 return false
             }
         })
-
         setProductos(productBreakfast)
     }
 
     const showLunch = () => {
-        const productBreakfast = data.filter(p => {
+        const productLunch = data.filter(p => {
             if (p.type === "Almuerzo") {
                 return true
             } else {
                 return false
             }
         })
-
-        setProductos(productBreakfast)
-
+        setProductos(productLunch)
     }
-
-
 
     if (!data) return <span>Cargando</span>
 
     return (
         <>
+        <MainMenu />
             {!modal.open && (
                 <section className="main-container">
                     <div className="container">
@@ -74,7 +70,7 @@ const PageWaiters = () => {
                             <div className="container-products">
                         {products.map(({ id, name, price, image, type }) => (
                                 <Product
-                                    key={id}
+                                    id={id}
                                     name={name}
                                     price={price}
                                     image={image}

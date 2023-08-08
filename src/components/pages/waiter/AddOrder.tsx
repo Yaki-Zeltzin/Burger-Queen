@@ -7,9 +7,18 @@ const AddOrder = () => {
     const [modal, setModal] = useState({ open: true })
 
     const viewWaiters = () => {
-        setModal({ open: false })
+        setModal({ open: true })
 
     }
+
+    const [order, setOrder] = useState({
+        name: "",
+        table: "",
+        products: []
+    })
+
+    console.log(order);
+
 
     return (
         <>
@@ -22,15 +31,29 @@ const AddOrder = () => {
                             type="text"
                             name="customer"
                             placeholder="Escribe aquí"
+                            onChange={(e) => {
+                                setOrder({
+                                    ...order,
+                                    name: e.target.value
+                                })
+                            }}
                         />
                     </div>
                     <div className="field">
                         <label>MESA</label>
-                        <input required
-                            type="text"
-                            name="table"
-                            placeholder="Escribe aquí"
-                        />
+                        <select name="table"
+                            className="field"
+                            onChange={(e) => {
+                                setOrder({
+                                    ...order,
+                                    table: e.target.value
+                                })
+                            }}>
+                            <option value="" >Elija una mesa</option>
+                            <option value="mesa-1" >mesa 1</option>
+                            <option value="mesa-2" >Mesa 2</option>
+                            <option value="mesa-3" >Mesa 3</option>
+                        </select>
                     </div>
                     <h1>CARRITO</h1>
                     <div className="order-history">

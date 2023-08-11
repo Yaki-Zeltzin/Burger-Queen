@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useState } from "react"
 
-const Registered = () => {
+const RegisterStaff = () => {
     const nav = useNavigate()
 
     const[error, setError] = useState()
@@ -14,6 +14,7 @@ const Registered = () => {
         const data = {
             email: e.target.email.value,
             password: e.target.password.value,
+            role: e.target.role.value,
             details:{
                 fullname: e.target.fullName.value,
             },
@@ -32,7 +33,7 @@ const Registered = () => {
         <>
             <div className="login-container">
                 <img src={image} alt="logo-Hamburger" />
-                <h1>Registrate</h1>
+                <h1>Crear nuevo trabajador</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="field">
                         <label htmlFor="fullNmae">Nombre Completo</label>
@@ -55,11 +56,15 @@ const Registered = () => {
                             name="password"
                         />
                     </div>
+                    <div className="field">
+                        <label htmlFor="password">Puesto</label>
+                        <input required
+                            type="text"
+                            name="role"
+                        />
+                    </div>
                     <div className="submit">
-                        <button type="submit" className="button">Crear cuenta</button>
-                        <Link className="login" to="/">
-                            ¿Ya tienes cuenta? Inicia sesión
-                        </Link>
+                        <button type="submit" className="button">Ingresar</button>
                         {error && (
                              <p className="error" >
                         {error.response.data}
@@ -74,4 +79,4 @@ const Registered = () => {
     )
 }
 
-export default Registered
+export default RegisterStaff

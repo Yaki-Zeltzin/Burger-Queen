@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
-import logo from "../../images/Group 8(1).png"
+
 
 const MainMenu = () => {
     const nav = useNavigate()
@@ -11,7 +11,6 @@ const MainMenu = () => {
 
   return (
     <header className="container-header">
-            <img src={logo} alt="hamburger"/>
         {
             !localStorage.getItem('tokenUser') ? (
                 <p>

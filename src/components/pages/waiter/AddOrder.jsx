@@ -10,9 +10,14 @@ const AddOrder = () => {
         products: []
     })
 
-    const showProducts = (e) => {
-        e.preventDefault()
-               console.log(order)
+    const [counter, setCounter] = useState(1)
+
+    const showProducts = () => {
+        setOrder({
+            name: "",
+            table: 0,
+            products: []
+        })
 
     }
     return (
@@ -49,16 +54,15 @@ const AddOrder = () => {
                 <h1>CARRITO</h1>
                 <div className="order-history">
                     <div className="items">
-                        <p>café con leche</p>
+                        <p><span>[{counter}] </span>café con leche</p>
                         <div className="delete">
                             <p > $17</p>
-                            <p> X</p>
-                        </div>
-                    </div>
-                    <div className="items">
-                        <p>sandwich</p>
-                        <div className="delete">
-                            <p > $17</p>
+                            <p onClick={(e) => {
+                                setCounter(counter+1)
+                            }}>+</p>  
+                            <p onClick={(e) => {
+                                counter > 0 ? setCounter(counter - 1) : setCounter(1)  
+                            }}>-</p>
                             <p> X</p>
                         </div>
                     </div>

@@ -11,6 +11,7 @@ const PageWaiters = () => {
     const [modal, setModal] = useState({ open: false })
     const [data, setData] = useState([])
     const [products, setProductos] = useState([])
+    const [productList, setProductList] = useState()
 
 
     const showModal = () => {
@@ -78,16 +79,6 @@ const PageWaiters = () => {
                                 />
                         ))}
                             </div>
-
-                        {/* <div className="container-button">
-                            <div className="menuButtons">
-                                <input
-                                    type="submit"
-                                    className="button"
-                                    value="VER CARRITO"
-                                />
-                            </div>
-                        </div> */}
                     </div>
                     <AddOrder />
                 </section>

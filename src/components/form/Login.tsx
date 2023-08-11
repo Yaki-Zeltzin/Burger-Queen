@@ -1,7 +1,7 @@
 import "./Login.css"
 import image from "../../images/Group 8(1).png"
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 const Login = () => {
@@ -36,10 +36,10 @@ const Login = () => {
           navigate('/mesero');
         }
         else if (data.data.user.role === "admin") {
-          console.log("dirigir a pagina mesero");
+          navigate("/registerStaff")
         }
         else {
-          console.log("dirigir pagina chef")
+          navigate("/chef")
         }
       })
       .catch((e) => {
@@ -105,10 +105,6 @@ const Login = () => {
               placeholder="Enviar"
               value="Ingresar"
             ></input>
-            <Link className="login" to="/register">
-              ¿No tienes cuenta? Registrate
-            </Link>
-             
           </div>
         </form>
 

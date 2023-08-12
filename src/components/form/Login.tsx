@@ -36,7 +36,7 @@ const Login = () => {
           navigate('/mesero');
         }
         else if (data.data.user.role === "admin") {
-          navigate("/registerStaff")
+          navigate("/workers")
         }
         else {
           navigate("/chef")

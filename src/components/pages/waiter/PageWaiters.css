@@ -175,3 +175,33 @@
     border-radius: 4px;
 
 }
+
+/* PAGE ADMIN */
+.title-admin {
+    text-align: center;
+}
+
+.workers-list-container {
+    display: flex;
+    border: 3px solid gray;
+    max-width: 600px;
+    border-radius: 4px;
+    margin: auto;
+}
+
+.workers-list-container .default {
+    margin: 25px 30px;
+    padding: 10px;
+}
+
+.small-button {
+    background: orange;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    margin: 20px 10px 10px 80px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}

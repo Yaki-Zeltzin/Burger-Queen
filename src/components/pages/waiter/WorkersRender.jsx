@@ -12,22 +12,14 @@ const WorkersRender = ({ id, email, role }) => {
   return (
 
 
-    <div className="container-orders" key={id}>
-      <table className="default">
-        <tr className="header-table">
-          <th>Email</th>
-          <th>Cargo</th>
-          <th>Actualizar</th>
-          <th>Eliminar</th>
-        </tr>
-        <tr>
-          <td>{email}</td>
-          <td>{role}</td>
-          <td>⚙</td>
-          <td>❌</td>
-        </tr>
-      </table>
-    </div>
+    <>
+      <tr>
+        <td>{email}</td>
+        <td>{role}</td>
+        <td>⚙</td>
+        <td>❌</td>
+      </tr>
+    </>
 
 
 

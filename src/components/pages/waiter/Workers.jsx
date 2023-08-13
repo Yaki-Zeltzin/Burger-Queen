@@ -1,10 +1,17 @@
 import "../../form/Login.css"
-import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
 import { useState, useEffect } from "react"
 import WorkersRender from "./WorkersRender"
+import { useNavigate } from "react-router-dom"
 
 const Workers = () => {
+
+
+  const nav = useNavigate()
+
+  const goAddWorker = () => {
+    nav("/registerStaff")
+  }
 
   const [staff, setStaff] = useState([]);
 
@@ -23,17 +30,31 @@ const Workers = () => {
       })
   }, [])
 
+
+
+
   console.log(staff);
   return <>
-
-    <div className="container-products">
-      {staff.map(({ id, email, role }) => (
-        <WorkersRender
-          id={id}
-          email={email}
-          role={role}
-        />
-      ))}
+    <h2 className="title-admin">Trabajadores Burger Queen</h2>
+    <div className="workers-list-container">
+      <table className="default">
+        <tr className="header-table">
+          <th>Email</th>
+          <th>Cargo</th>
+          <th>Actualizar</th>
+          <th>Eliminar</th>
+        </tr>
+        {staff.map(({ id, email, role }) => (
+          <WorkersRender
+            id={id}
+            email={email}
+            role={role}
+          />
+        ))}
+      </table>
+    </div>
+    <div className="add-container">
+      <button className="small-button" onClick={goAddWorker} >Agregar trabajador</button>
     </div>
 
   </>

@@ -1,5 +1,5 @@
 import "./Login.css"
-import image from "../../images/Group 8(1).png"
+import image from "../../images/Group 12.png"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import axios from "axios"

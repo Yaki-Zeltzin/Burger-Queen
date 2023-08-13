@@ -5,9 +5,6 @@ import { useState } from "react"
 
 const WorkersRender = ({ id, email, role }) => {
 
-  const [worker, setworker] = useState([0])
-
-
   // console.log(product)
   return (
 

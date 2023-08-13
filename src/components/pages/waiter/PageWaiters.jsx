@@ -33,7 +33,7 @@ const PageWaiters = () => {
             })
     }, [])
 
-    const showBreakfast = () => { 
+    const showBreakfast = () => {
         const productBreakfast = data.filter(p => {
             if (p.type === "Desayuno") {
                 return true
@@ -59,7 +59,7 @@ const PageWaiters = () => {
 
     return (
         <>
-        <MainMenu />
+            <MainMenu />
             {!modal.open && (
                 <section className="main-container">
                     <div className="container">
@@ -68,8 +68,8 @@ const PageWaiters = () => {
                             <button className="button" onClick={showLunch}>ALMUERZO Y CENA</button>
                         </div>
 
-                            <div className="container-products">
-                        {products.map(({ id, name, price, image, type }) => (
+                        <div className="container-products">
+                            {products.map(({ id, name, price, image, type }) => (
                                 <Product
                                     id={id}
                                     name={name}
@@ -77,8 +77,8 @@ const PageWaiters = () => {
                                     image={image}
                                     type={type}
                                 />
-                        ))}
-                            </div>
+                            ))}
+                        </div>
                     </div>
                     <AddOrder />
                 </section>

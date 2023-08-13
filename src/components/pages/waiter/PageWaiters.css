@@ -81,6 +81,7 @@
     border-radius: 3px;
     border: none;
     margin-top: 5px;
+    color: rgb(75, 75, 75);
     background: rgb(233, 230, 230);
 }
 
@@ -177,6 +178,17 @@
 }
 
 /* PAGE ADMIN */
+
+.container-admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.simple-logo {
+    width: 30%;
+}
+
 .title-admin {
     text-align: center;
 }
@@ -194,14 +206,18 @@
     padding: 10px;
 }
 
+.add-container {
+    padding: 20px 20px 10px 20px;
+}
+
 .small-button {
     background: orange;
     border-radius: 5px;
     padding: 10px 20px 10px 20px;
-    margin: 20px 10px 10px 80px;
     border: none;
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
     color: black;
+
 }

@@ -6,6 +6,7 @@ import PageWaiters from './components/pages/waiter/PageWaiters';
 import PageAdmin from './components/pages/waiter/PageAdmin';
 import PageChef from './components/pages/waiter/PageChef';
 import RegisterStaff from './components/pages/waiter/RegisterStaff';
+import Workers from './components/pages/waiter/Workers';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/orders' element={<PageAdmin />} />
           <Route path='/chef' element={<PageChef />} />
           <Route path='/registerStaff' element={<RegisterStaff />} />
+          <Route path="/workers" element={<Workers />} />
         </Routes>
       </Router>
 

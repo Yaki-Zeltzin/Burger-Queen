@@ -7,7 +7,7 @@ import { useState } from "react"
 const RegisterStaff = () => {
     const nav = useNavigate()
 
-    const[error, setError] = useState()
+    const [error, setError] = useState()
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -15,18 +15,18 @@ const RegisterStaff = () => {
             email: e.target.email.value,
             password: e.target.password.value,
             role: e.target.role.value,
-            details:{
+            details: {
                 fullname: e.target.fullName.value,
             },
         }
 
-         axios.post('http://localhost:8080/users', data)
-         .then(() => {
-             nav("/")
-         })
-         .catch((err) => {
-             setError(err)
-         })
+        axios.post('http://localhost:8080/users', data)
+            .then(() => {
+                nav("/workers")
+            })
+            .catch((err) => {
+                setError(err)
+            })
     }
 
     return (
@@ -66,10 +66,10 @@ const RegisterStaff = () => {
                     <div className="submit">
                         <button type="submit" className="button">Ingresar</button>
                         {error && (
-                             <p className="error" >
-                        {error.response.data}
-                    </p>
-                )}
+                            <p className="error" >
+                                {error.response.data}
+                            </p>
+                        )}
                     </div>
                 </form>
 

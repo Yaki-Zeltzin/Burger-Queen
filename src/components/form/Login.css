@@ -1,5 +1,5 @@
 :root {
-  --orange: #FF6000;
+  --orange: orange;
   --black: rgba(255, 255, 255, 0.04);
 }
 
@@ -80,7 +80,7 @@ h1 {
   padding: .7rem;
   border-radius: 8px;
   width: 100%;
-  color: white;
+  color: rgb(37, 37, 37);
   font-size: 15px;
   font-weight: bold;
 }
@@ -93,7 +93,7 @@ h1 {
 }
 
 /* MAin Menu */
-.container-header{
+.container-header {
   padding: 0 1.5em 1em;
   text-align: end;
   cursor: pointer;

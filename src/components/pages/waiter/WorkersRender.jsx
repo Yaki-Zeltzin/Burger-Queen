@@ -1,7 +1,6 @@
 
 import React from "react"
-import Workers from "./Workers"
-import { useState } from "react"
+
 
 const WorkersRender = ({ id, email, role }) => {
 

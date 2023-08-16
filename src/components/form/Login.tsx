@@ -24,10 +24,7 @@ const Login = () => {
     e.preventDefault()
     axios.post('http://localhost:8080/login', user)
       .then((data) => {
-        console.log(data.status)
-        console.log(data.data.user.role)
         localStorage.setItem('tokenUser', data.data.accessToken)
-        console.log(data)
         setErrors({
           email: false,
           password: false
